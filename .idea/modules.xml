@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ninas-repository.iml" filepath="$PROJECT_DIR$/.idea/ninas-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../techBasics1/.idea/techBasics1.iml" filepath="$PROJECT_DIR$/../techBasics1/.idea/techBasics1.iml" />
     </modules>
   </component>
 </project>
