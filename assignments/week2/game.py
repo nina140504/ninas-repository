@@ -70,7 +70,7 @@ def start_game():
     second_trial(has_dagger)
 
 def second_trial(has_dagger):
-    print("\nSecond trial: The Guardian blocks your path.")
+    print("\nSecond trial: The Guardian blocks your path. He gives you a simple task:")
     time.sleep(1.5)
 
     while True:
