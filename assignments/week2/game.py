@@ -1,12 +1,14 @@
 import time
 import sys
 
+
 def type_effect(text, delay=0.02):
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(delay)
     print()
+
 
 def restart_game():
     type_effect("Do you want to try again? (yes/no): ")
@@ -17,10 +19,12 @@ def restart_game():
         type_effect("The shadows swallow you whole. GAME OVER.")
         return
 
+
 def start_game():
     has_dagger = False
 
-    type_effect("🌲 You wake up in a dark forest. You feel dizzy and tired. The wind whispers and the fog surrounds you.")
+    type_effect(
+        "🌲 You wake up in a dark forest. You feel dizzy and tired. The wind whispers and the fog surrounds you.")
     time.sleep(1)
     type_effect("A voice echoes: 'To return, you must pass the trials of the Portal of Shadows.'")
     time.sleep(1)
@@ -32,7 +36,8 @@ def start_game():
 
     print("\nFirst trial: Choose your path.")
     time.sleep(1.5)
-    type_effect("Do you go left towards the glowing mushrooms (type 'left') or right towards the howling trees (type 'right')? ")
+    type_effect(
+        "Do you go left towards the glowing mushrooms (type 'left') or right towards the howling trees (type 'right')? ")
     path = input().strip().lower()
 
     if path == "left":
@@ -59,7 +64,8 @@ def start_game():
             type_effect("You feel stronger. You may need this...")
             time.sleep(1.5)
         else:
-            type_effect("A shadow watches you from afar. You're defenseless. It comes closer and your nightmares become reality. 💀 GAME OVER")
+            type_effect(
+                "A shadow watches you from afar. You're defenseless. It comes closer and your nightmares become reality. 💀 GAME OVER")
             restart_game()
             return
     else:
@@ -68,6 +74,7 @@ def start_game():
         return
 
     second_trial(has_dagger)
+
 
 def second_trial(has_dagger):
     print("\nSecond trial: The Guardian blocks your path. He gives you a simple task:")
@@ -126,6 +133,7 @@ def second_trial(has_dagger):
 
     final_trial()
 
+
 def final_trial():
     print("\nFinal trial: You reach the Portal of Shadows.")
     time.sleep(1.5)
@@ -155,5 +163,6 @@ def final_trial():
     else:
         type_effect("You hesitate. The portal fades. 💀 GAME OVER.")
         restart_game()
+
 
 start_game()
