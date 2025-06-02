@@ -5,11 +5,15 @@ import random
 # global list to hold student data as dictionaries
 students = []
 
-# list of weeks we expect (week1 to week13 but skip week6)
+
+# AI was used to help me with parts of this task
+
+
+# list of weeks (week1 to week13 but skip week6)
 weeks = [f"week{i}" for i in range(1,14) if i != 6]
 
 def read_csv(filename):
-    # read the csv file and save rows (AI was used for parts of this function)
+    # read the csv file and save rows
     global students
     try:
         with open(filename, newline="", encoding="utf-8") as f:
@@ -60,7 +64,7 @@ def calculate_average(scores):
     return round(sum(scores) / len(scores), 2)
 
 def write_csv(filename):
-    # write all student data to new csv file (AI was used for parts of this function)
+    # write all student data to new csv file
     fieldnames = list(students[0].keys())
     with open(filename, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
