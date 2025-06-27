@@ -48,8 +48,10 @@ start_time = pygame.time.get_ticks()
 def create_suitcase():
     color = random.choice(["red", "blue"])
     image = suitcase_red_img if color == "red" else suitcase_blue_img
-    rect = image.get_rect(center=(WIDTH // 2, HEIGHT - 60))
+    x_pos = random.randint(50, WIDTH - 50)
+    rect = image.get_rect(center=(x_pos, HEIGHT - 60))
     return {"image": image, "rect": rect, "color": color, "fired": False}
+
 
 suitcase = create_suitcase()
 
